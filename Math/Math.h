@@ -6,6 +6,10 @@
 #include "Quaternion.h"
 #include "Matrix.h"
 #include "Rectangle.h"
+#include "Sphere.h"
+#include "Ray.h"
+#include "Plane.h"
+#include "Triangle.h"
 
 #ifdef USEATTYPE
 namespace At
@@ -44,7 +48,15 @@ namespace At
 				};
 			};
 
+			const double PI = 3.14159265358979323846;
 			
+			const float DistanceOf( const Plane& plane, const Float3& point );
+			const float DistanceOf( const Ray& ray, const Float3& point );
+			const float DistanceOf( const Ray& lhs, const Ray& rhs );
+			const float DistanceOf( const Ray& ray, const Sphere& sphere );
+			const float DistanceOf( const Sphere& lhs, const Sphere& rhs );
+			const float DistanceOf( const Sphere& sphere, const Float3& point );
+
 			template< typename T >
 			void Swap( T& lhs, T& rhs )
 			{

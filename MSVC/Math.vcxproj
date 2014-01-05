@@ -11,20 +11,33 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Math\BoundBox.h" />
+    <ClInclude Include="..\Math\IBound.h" />
+    <ClInclude Include="..\Math\Line.h" />
     <ClInclude Include="..\Math\Math.h" />
     <ClInclude Include="..\Math\Matrix.h" />
+    <ClInclude Include="..\Math\Plane.h" />
     <ClInclude Include="..\Math\Quaternion.h" />
+    <ClInclude Include="..\Math\Ray.h" />
     <ClInclude Include="..\Math\Rectangle.h" />
+    <ClInclude Include="..\Math\Sphere.h" />
+    <ClInclude Include="..\Math\Triangle.h" />
     <ClInclude Include="..\Math\Vector2.h" />
     <ClInclude Include="..\Math\Vector3.h" />
     <ClInclude Include="..\Math\Vector4.h" />
     <ClInclude Include="..\Type.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Math\BoundBox.cpp" />
+    <ClCompile Include="..\Math\Line.cpp" />
     <ClCompile Include="..\Math\Math.cpp" />
     <ClCompile Include="..\Math\Matrix.cpp" />
+    <ClCompile Include="..\Math\Plane.cpp" />
     <ClCompile Include="..\Math\Quaternion.cpp" />
+    <ClCompile Include="..\Math\Ray.cpp" />
     <ClCompile Include="..\Math\Rectangle.cpp" />
+    <ClCompile Include="..\Math\Sphere.cpp" />
+    <ClCompile Include="..\Math\Triangle.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{B4EBC426-7A6A-4A7C-9702-3C2FB138D055}</ProjectGuid>

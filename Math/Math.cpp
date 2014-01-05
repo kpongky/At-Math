@@ -1,3 +1,4 @@
+#include <numeric>
 #include <math.h>
 #include <assert.h>
 #include "../Type.h"
@@ -9,6 +10,41 @@ namespace At
 	{
 		namespace Math
 		{
+			
+			const float DistanceOf( const Plane& plane, const Float3& point )
+			{
+				return DistanceOf( plane.NearPointOf( point ), point );
+			}
+
+			const float DistanceOf( const Ray& ray, const Float3& point )
+			{
+				return DistanceOf( ray.NearPointOf( point ), point );
+			}
+
+			const float DistanceOf( const Ray& lhs, const Ray& rhs )
+			{
+				Float3 point = rhs.NearPointOf( lhs.origin );
+				return DistanceOf( lhs, point );
+			}
+
+			const float DistanceOf( const Ray& ray, const Sphere& sphere )
+			{
+				const float result = DistanceOf( ray, sphere.center ) - sphere.radius;
+				return ( std::max )( result, 0.0f );
+			}
+
+			const float DistanceOf( const Sphere& lhs, const Sphere& rhs )
+			{
+				const float result = DistanceOf( lhs.center, rhs.center ) - lhs.radius - rhs.radius;
+				return ( std::max )( result, 0.0f );
+			}
+
+			const float DistanceOf( const Sphere& sphere, const Float3& point )
+			{
+				const float result = DistanceOf( sphere.center, point ) - sphere.radius;
+				return ( std::max )( result, 0.0f );
+			}
+
 			const bool SolveSecondOrderEquation( const float a, const float b, const float c, float& solution1, float& solution2 )
 			{
 				const float d = ( b * b ) - ( 4 * a * c );
