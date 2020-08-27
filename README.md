@@ -7,4 +7,3 @@ kpongky@naver.com
 
 kpongky@gmail.com
 
-http://blog.daum.net/voltaire (not ready yet)
