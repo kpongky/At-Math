@@ -1,9 +1,4 @@
-At-Math
-====
-This is the math module for my private game project named 'At'.
-Please, let me know if there's a problem or bug.
-
-kpongky@naver.com
+If there's a problem, let me know please.
 
 kpongky@gmail.com
 
